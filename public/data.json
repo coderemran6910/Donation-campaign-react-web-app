@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/Nsz4nnS/Food.png",
+    "title": "Supporting Food Programs",
+    "category": "Food",
+    "description": "Help us combat hunger by contributing to our food distribution program. Every meal counts.",
+    "price": 50,
+    "colors": {
+      "text": "#F87147",
+      "category": "#FDD2C4",
+      "background": "#FEEAE3"
+    }
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/LvdSMY0/Health.png",
+    "title": "Supporting Medical Clinics",
+    "category": "Health",
+    "description": "Help us provide medical care to those in need. Your donation can make a difference in saving lives.",
+    "price": 30,
+    "colors": {
+      "text": "#0052FF",
+      "category": "#AEC8FF",
+      "background": "#D9E5FF"
+    }
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/znwHYdw/Rectangle-4284.png",
+    "title": "Warm Clothing Drive",
+    "category": "Clothing",
+    "description": "Join our winter clothing drive to provide warmth to those facing cold weather without proper clothing.",
+    "price": 20,
+    "colors": {
+      "text": "#79C23F",
+      "category": "#D4ECC1",
+      "background": "#EBF6E5"
+    }
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/HTqrbN1/Rectangle-4287.png",
+    "title": "Educational Scholarships",
+    "category": "Education",
+    "description": "Empower underprivileged students with the gift of education. Sponsor a child's future today.",
+    "price": 10,
+    "colors": {
+      "text": "#FF444A",
+      "category": "#FFC3C5",
+      "background": "#FFE3E4"
+    }
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/H7zgSk7/Rectangle-4287-1.png",
+    "title": "Maternal Health Support",
+    "category": "Health",
+    "description": "Support expecting mothers by ensuring access to quality maternal health services. Give the gift of life.",
+    "price": 40,
+    "colors": {
+      "text": "#0052FF",
+      "category": "#AEC8FF",
+      "background": "#D9E5FF"
+    }
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/gPvTQ8y/Rectangle-4287-2.png",
+    "title": "Scholarship for STEM ",
+    "category": "Education",
+    "description": "Foster the next generation of scientists and engineers by sponsoring STEM scholarships.",
+    "price": 25,
+    "colors": {
+      "text": "#FF444A",
+      "category": "#FFC3C5",
+      "background": "#FFE3E4"
+    }
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/0QrtGsK/online-marketing-h-Igeo-Qj-S-i-E-unsplash.jpg",
+    "title": "Winter Blanket Drive",
+    "category": "Clothing",
+    "description": "Help us provide warmth during the winter season. Donate blankets and bring comfort to the homeless.",
+    "price": 15,
+    "colors": {
+      "text": "#79C23F",
+      "category": "#D4ECC1",
+      "background": "#EBF6E5"
+    }
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/gdHZ7WY/Clothing.png",
+    "title": "Clothing for Children in Need",
+    "category": "Clothing",
+    "description": "Help us provide clothing for children who lack access to proper attire. Give them a brighter future.",
+    "price": 12,
+    "colors": {
+      "text": "#79C23F",
+      "category": "#D4ECC1",
+      "background": "#EBF6E5"
+    }
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co/FwdDYbr/Education.png",
+    "title": "Educational Outreach Programs",
+    "category": "Education",
+    "description": "Support our educational outreach programs aimed at increasing literacy and knowledge.",
+    "price": 55,
+    "colors": {
+      "text": "#FF444A",
+      "category": "#FFC3C5",
+      "background": "#FFE3E4"
+    }
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co/M88gsbb/boxed-water-is-better-Aw-XY77-T-w-ZA-unsplash.jpg",
+    "title": "Support Clean Water Initiatives",
+    "category": "Health",
+    "description": "Ensure access to clean and safe drinking water for communities in need. Make a lasting impact.",
+    "price": 35,
+    "colors": {
+      "text": "#0052FF",
+      "category": "#AEC8FF",
+      "background": "#D9E5FF"
+    }
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co/0c4PMd8/mariana-medvedeva-usf-IE5-Yc7-PY-unsplash.jpg",
+    "title": "Emergency Relief Fund",
+    "category": "Food",
+    "description": "Support our emergency food relief efforts to provide immediate assistance to those in crisis.",
+    "price": 18,
+    "colors": {
+      "text": "#F87147",
+      "category": "#FDD2C4",
+      "background": "#FEEAE3"
+    }
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co/0QrtGsK/online-marketing-h-Igeo-Qj-S-i-E-unsplash.jpg",
+    "title": "Online Learning Resources",
+    "category": "Education",
+    "description": "Expand access to online learning resources for students and educators. Bridge the digital divide.",
+    "price": 8,
+    "colors": {
+      "text": "#FF444A",
+      "category": "#FFC3C5",
+      "background": "#FFE3E4"
+    }
+  }
+]
