@@ -1,56 +1,33 @@
 import { useContext, useEffect, useState } from "react";
 import { MyAllDataContext } from "../Layout/Layout";
 import { getDataFromLocalStorage } from "../utility/Utility";
+import Card from "../components/Card";
+import SingleDonationItem from "../components/SingleDonationItem";
 
 const Donation = () => {
   const [donationData, setDonationData] = useState([]);
 
 
   const cardData = useContext(MyAllDataContext);
-  const localStoredData = getDataFromLocalStorage("donation");
+ 
   
 //   const { title, category, image, colors} = cardData;
   useEffect(() => {
-    const findcardDataByLocalStoredData = cardData.find((card) => {
+    const localStoredData = getDataFromLocalStorage("donation");
+    const findcardDataByLocalStoredData = cardData.filter((card) => {
       return localStoredData.includes(card.id);
     });
-    setDonationData(findcardDataByLocalStoredData) || {};
-  }, [cardData, localStoredData]);
 
-  console.log(donationData.title);
+    setDonationData(findcardDataByLocalStoredData) || {};
+  }, [cardData]);
+  console.log(donationData);
+
   return (
-    <div>
-      {/* <div>
-        <div>
-          <div className="card card-compact  w-80  h-72 shadow-xl">
-            <figure>
-              <img
-                className="w-full h-48 rounded-lg  object-cover overflow-hidden"
-                src={image}
-                alt="Shoes"
-              />
-            </figure>
-            <div
-              style={{
-                background: `${colors.background}`,
-                color: `${colors.text}`,
-              }}
-              className="card-body"
-            >
-              <div className="card-actions justify-start">
-                <button
-                  style={{ background: `${colors.category}` }}
-                  className="btn "
-                >
-                  {category}
-                </button>
-              </div>
-              <h2 className="card-title">{title}</h2>
-            </div>
-          </div>
-        </div>
-      </div> */}
-    </div>
+   <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2  gap-10 mt-20 container mx-auto   mb-20">
+    {
+     donationData && donationData.map(singleData => <SingleDonationItem key={singleData.id} singleData={singleData}></SingleDonationItem>)
+    }
+   </div>
   );
 };
 
