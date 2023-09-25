@@ -7,7 +7,7 @@ const Card = ({ card }) => {
 
 const navigate = useNavigate()
 const handleClick = () => {
-    navigate(`/donation/${id}`)
+    navigate(`/donationDetails/${id}`)
 
    
 }
