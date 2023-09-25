@@ -1,12 +1,15 @@
 import PropTypes from "prop-types"
 import { useNavigate } from "react-router-dom";
 
+
 const Card = ({ card }) => {
   const {id, title, category, image, colors} = card;
 
 const navigate = useNavigate()
 const handleClick = () => {
     navigate(`/donation/${id}`)
+
+   
 }
 
 

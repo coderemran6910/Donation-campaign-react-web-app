@@ -1,15 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import HomePage from "../Pages/HomePage";
-import Donation from "../Pages/Donation";
+import Donation from "../Pages/DonationPage";
 import Statastics from "../Pages/Statastics";
 import DonationDetails from "../components/DonationDetails";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout></Layout>,
-        loader: ()=>fetch('../../public/data.json'),
+        errorElement: <ErrorPage></ErrorPage>,
+        loader: async()=> await fetch('../../public/data.json'),
         children: [
             {
                 path: "/",

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MyAllDataContext } from "../Layout/Layout";
 import {setDataInLocalStorage} from "../utility/Utility";
+import Swal from "sweetalert2";
 
 const DonationDetails = () => {
     const [donationData, setDonationData] = useState({});
@@ -16,6 +17,12 @@ const DonationDetails = () => {
 
     const handleDonation = () => {
         setDataInLocalStorage("donation", donationData.id);
+
+        Swal.fire(
+            'Good job!',
+            'You Successfuly done your Donation!',
+            'success'
+          )
     };
 
     return (
