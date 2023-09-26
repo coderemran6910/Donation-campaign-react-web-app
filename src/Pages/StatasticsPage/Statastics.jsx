@@ -1,15 +1,7 @@
-
 import { useContext } from 'react';
 import { PieChart, Pie, ResponsiveContainer, Cell } from 'recharts';
 import { MyAllDataContext } from '../../Layout/Layout';
 import { getDataFromLocalStorage } from '../../utility/Utility';
-
-
-
-
-
-
-
 
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -24,28 +16,27 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 };
 
 const Statistics = () => {
+  const totalDonationData = useContext(MyAllDataContext);
+  const yourDonationData = getDataFromLocalStorage("donation");
 
-    const totalDonationData = useContext(MyAllDataContext)
-    const yourDonationData = getDataFromLocalStorage("donation")
+  const data = [
+    { name: 'Total Donations', value: totalDonationData.length || 0 },
+    { name: 'Your Donations', value: yourDonationData.length || 0 }
+  ];
 
-    const data = [
-        { name: 'Total Donations', value: totalDonationData.length || 0 },
-        { name: 'Group B', value: yourDonationData.length || 0 }
-      ];
-      
-      const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-  
+  const COLORS = ['#FF444A', '#00C49F'];
+
   return (
-    <div >
+    <div>
       <ResponsiveContainer width="100%" height={400}>
-        <PieChart >
+        <PieChart>
           <Pie
             data={data}
             cx="50%"
             cy="50%"
             labelLine={false}
             label={renderCustomizedLabel}
-            outerRadius={80}
+            outerRadius="80%"
             fill="#8884d8"
             dataKey="value"
           >
