@@ -41,8 +41,7 @@ const DonationPage = () => {
               displayDonationData === donationData.length && "hidden"
             } `}
           >
-            {" "}
-            See All{" "}
+            See All
           </button>
         ) : (
           ""

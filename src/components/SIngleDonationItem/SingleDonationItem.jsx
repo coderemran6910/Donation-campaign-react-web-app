@@ -1,12 +1,10 @@
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
-
 const SingleDonationItem = ({ singleData }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { title, category, image, colors, price } = singleData;
 
-  
   return (
     <div>
       <div>
@@ -34,16 +32,21 @@ const SingleDonationItem = ({ singleData }) => {
               </span>
             </div>
             <h2 className=" md:card-title text-black">{title}</h2>
-            <h3 style={{ color: `${colors.text}` }} className=" font-semibold ">
-              ${price}
-            </h3>
-            <button
-              onClick={() => navigate(`/donationDetails/${singleData.id}`)}
-              style={{ background: `${colors.text}` }}
-              className="btn py-2 md:py-4 px-2 md:px-4 text-white  w-32 h-5 text-md font-normal"
-            >
-              View Details{" "}
-            </button>
+            <div className="flex justify-center mt-5 md:mt-0 gap-5 md:gap-0 md:flex-col items-center md:items-start">
+              <h3
+                style={{ color: `${colors.text}` }}
+                className=" font-semibold "
+              >
+                ${price}
+              </h3>
+              <button
+                onClick={() => navigate(`/donationDetails/${singleData.id}`)}
+                style={{ background: `${colors.text}` }}
+                className="btn py-2 md:py-4 px-2 md:px-4 text-white  w-32  text-xs md:text-md font-normal"
+              >
+                View Details
+              </button>
+            </div>
           </div>
         </div>
       </div>

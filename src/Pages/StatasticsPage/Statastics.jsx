@@ -27,6 +27,7 @@ const Statistics = () => {
   const COLORS = ['#FF444A', '#00C49F'];
 
   return (
+   <>
     <div>
       <ResponsiveContainer width="100%" height={400}>
         <PieChart>
@@ -47,6 +48,18 @@ const Statistics = () => {
         </PieChart>
       </ResponsiveContainer>
     </div>
+
+    <div className='flex gap-10 justify-center  items-center'>
+       <div className='flex flex-col lg:flex-row gap-5 items-center'>
+        <p className=' font-bold italic'>Your Donation</p>
+        <progress className="progress  progress-info w-20" value={ yourDonationData.length || 0 } max="12"></progress>
+       </div>
+       <div className='flex flex-col lg:flex-row gap-5 items-center'>
+        <p className=' font-bold italic'>Total Donation</p>
+        <progress  className="progress progress-error  w-20" value={totalDonationData.length} max="12"></progress>
+       </div>
+    </div>
+   </>
   );
 };
 
