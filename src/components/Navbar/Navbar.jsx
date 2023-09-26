@@ -9,7 +9,7 @@ const Navbar = () => {
           <img src={logo} alt="" />
         </div>
         <div className="flex-none">
-          <div className="menu menu-horizontal px-1 flex text-black gap-6 md:gap-12 md:text-xl font-bold">
+          <div className="menu menu-horizontal px-1 flex text-black gap-6 md:gap-10 md:text-xl font-bold">
             <NavLink to={"/"}>Home</NavLink>{" "}
             <NavLink to={"/donation"}>Donation</NavLink>{" "}
             <NavLink to={"/statistics"}>Statistics</NavLink>{" "}

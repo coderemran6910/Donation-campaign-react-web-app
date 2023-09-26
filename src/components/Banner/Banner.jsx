@@ -1,8 +1,12 @@
 import bannerImg from "../../assets/Resources/banner.png";
 import Header from "../Header/Header";
 import PropTypes from "prop-types";
-const Banner = ({ handleSearchBtn }) => {
-  
+const Banner = ({ handleInput, handleSearchBtn }) => {
+  const handleSearchBar = (e) => {
+    e.preventDefault();
+    // Instead of capturing the input value here, pass it to the parent component
+    handleInput(e);
+  };
 
   return (
     <div>
@@ -10,10 +14,13 @@ const Banner = ({ handleSearchBtn }) => {
         className="hero h-screen  z-10 top-0 mx-auto"
         style={{
           backgroundImage: `url(${bannerImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+
         }}
       >
         <div className=" container mx-auto absolute top-0">
-          {" "}
           <Header></Header>
         </div>
 
@@ -25,7 +32,7 @@ const Banner = ({ handleSearchBtn }) => {
             </h1>
 
             <div className="flex items-center justify-center">
-              <form>
+              <form onSubmit={handleSearchBar}>
                 <div className="form-control ">
                   <div className="input-group">
                     <input
@@ -35,7 +42,7 @@ const Banner = ({ handleSearchBtn }) => {
                       name="searchInput"
                     />
                     <div>
-                      <button onClick={handleSearchBtn} className="btn btn-square  w-auto px-5 text-white bg-red-600">
+                      <button onClick={handleSearchBtn} className="btn btn-square  w-auto px-5 text-white bg-red-600 hover:bg-red-500">
                         Search
                       </button>
                     </div>
@@ -51,6 +58,7 @@ const Banner = ({ handleSearchBtn }) => {
 };
 
 Banner.propTypes = {
+  handleInput: PropTypes.func.isRequired,
   handleSearchBtn: PropTypes.func.isRequired,
 }
 
