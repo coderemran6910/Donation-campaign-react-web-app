@@ -3,15 +3,13 @@ import Layout from "../Layout/Layout";
 import HomePage from "../Pages/HomePage/HomePage";
 import Statistics from "../Pages/StatasticsPage/Statastics";
 import DonationDetails from "../components/DonationDetails/DonationDetails";
-import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import DonationPage from "../Pages/DonationPAge/DonationPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout></Layout>,
-        errorElement: <ErrorPage></ErrorPage> ,
-        loader: async()=> await fetch('../../public/data.json'),
+        loader: async()=> await fetch('data.json'),
         children: [
             {
                 path: "/",
