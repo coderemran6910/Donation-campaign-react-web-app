@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { MyAllDataContext } from "../Layout/Layout";
-import { getDataFromLocalStorage } from "../utility/Utility";
-import SingleDonationItem from "../components/SingleDonationItem";
+import { MyAllDataContext } from "../../Layout/Layout";
+import { getDataFromLocalStorage } from "../../utility/Utility";
+import SingleDonationItem from "../../components/SIngleDonationItem/SingleDonationItem";
 
-const Donation = () => {
+const DonationPage = () => {
   const [donationData, setDonationData] = useState([]);
   const [displayDonationData, setDisplayDonationData] = useState(4);
 
@@ -52,4 +52,4 @@ const Donation = () => {
   );
 };
 
-export default Donation;
+export default DonationPage;

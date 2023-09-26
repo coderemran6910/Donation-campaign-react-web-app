@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { MyAllDataContext } from "../Layout/Layout";
-import Card from "./Card";
+import { MyAllDataContext } from "../../Layout/Layout";
+import Card from "./../Card/Card";
 
 const Cards = () => {
     const cardsData= useContext(MyAllDataContext)

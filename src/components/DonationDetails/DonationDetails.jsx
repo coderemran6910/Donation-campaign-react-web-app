@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { MyAllDataContext } from "../Layout/Layout";
-import { setDataInLocalStorage } from "../utility/Utility";
+import { MyAllDataContext } from "../../Layout/Layout";
+import { setDataInLocalStorage } from "../../utility/Utility";
 import Swal from "sweetalert2";
 
 const DonationDetails = () => {

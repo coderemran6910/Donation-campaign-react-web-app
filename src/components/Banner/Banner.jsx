@@ -1,5 +1,5 @@
-import bannerImg from "../assets/Resources/banner.jpg";
-import Header from "./Header";
+import bannerImg from "../../assets/Resources/banner.jpg";
+import Header from "../Header/Header";
 
 const Banner = () => {
   return (

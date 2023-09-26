@@ -1,16 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
-import HomePage from "../Pages/HomePage";
-import Donation from "../Pages/DonationPage";
-import Statastics from "../Pages/Statastics";
-import DonationDetails from "../components/DonationDetails";
-import ErrorPage from "../Pages/ErrorPage";
+import HomePage from "../Pages/HomePage/HomePage";
+import Statistics from "../Pages/StatasticsPage/Statastics";
+import DonationDetails from "../components/DonationDetails/DonationDetails";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import DonationPage from "../Pages/DonationPAge/DonationPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout></Layout>,
-        errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage> ,
         loader: async()=> await fetch('../../public/data.json'),
         children: [
             {
@@ -19,15 +19,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "/donation",
-                element: <Donation></Donation>
+                element: <DonationPage></DonationPage>
             },
             {
                 path: "/donationDetails/:id",
-                element: <DonationDetails></DonationDetails>
+                element: <DonationDetails> </DonationDetails>
             },
             {
                 path: "/statasrics",
-                element: <Statastics></Statastics>
+                element: <Statistics></Statistics>
             }
         ]
     }

@@ -1,8 +1,8 @@
 
 import { useContext } from 'react';
 import { PieChart, Pie, ResponsiveContainer, Cell } from 'recharts';
-import { MyAllDataContext } from '../Layout/Layout';
-import { getDataFromLocalStorage } from '../utility/Utility';
+import { MyAllDataContext } from '../../Layout/Layout';
+import { getDataFromLocalStorage } from '../../utility/Utility';
 
 
 

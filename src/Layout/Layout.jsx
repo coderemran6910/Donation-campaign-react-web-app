@@ -1,7 +1,7 @@
 import { Outlet, useLoaderData, useLocation } from "react-router-dom";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import { createContext } from "react";
-import Banner from "../components/Banner";
+import Banner from "../components/Banner/Banner";
 
 export const MyAllDataContext = createContext(null);
 const Layout = () => {
