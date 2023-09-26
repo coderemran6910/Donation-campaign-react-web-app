@@ -16,7 +16,7 @@ const handleClick = () => {
   return (
     <div onClick={handleClick}>
       <div>
-        <div className="card card-compact  w-80  h-72 shadow-xl">
+        <div className="card card-compact w-96 md:w-80  h-72 shadow-xl">
           <figure>
             <img
             className="w-full h-48 rounded-lg  object-cover overflow-hidden"
