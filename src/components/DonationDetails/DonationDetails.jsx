@@ -17,26 +17,17 @@ const DonationDetails = () => {
   const handleDonation = () => {
     setDataInLocalStorage("donation", donationData.id);
 
-    Swal.fire("Good job!", "You Successfuly done your Donation!", "success");
+    Swal.fire("Thanks!", "You Successfuly done your Donation!", "success");
   };
 
   return (
-    <div className="mt-10 container mx-auto">
+    <div className=" w-96 md:w-3/4 mt-10 container mx-auto mb-10">
       <div className="flex justify-center flex-col relative">
         <img
           className="w-full h-[450px] object-cover rounded-lg"
           src={donationData.image}
           alt=""
         />
-        {/* <div className="absolute left-5 bottom-5 ">
-          <button
-            onClick={handleDonation}
-            className="btn bg-red-600 font-extrabold text-slate-50 border-none hover:bg-red-500"
-          >
-            Donate ${donationData.price}
-          </button>
-        </div> */}
-
         <div className="absolute bottom-0 left-0 w-full py-12 bg-black opacity-50 flex items-center justify-center z-0"></div>
           <button
             onClick={handleDonation}
@@ -48,7 +39,7 @@ const DonationDetails = () => {
 
 
       </div>
-      <h1 className="text-5xl font-bold mt-14">{donationData.title}</h1>
+      <h1 className="text-5xl font-bold mt-6">{donationData.title}</h1>
       <p className="mt-6 text-base font-normal">{donationData.description}</p>
     </div>
   );

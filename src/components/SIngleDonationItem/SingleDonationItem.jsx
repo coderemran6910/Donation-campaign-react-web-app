@@ -10,8 +10,8 @@ const SingleDonationItem = ({ singleData }) => {
   return (
     <div>
       <div>
-        <div className="h-48 shadow-xl flex rounded-xl">
-          <figure className="w-[200px] h-48">
+        <div className=" w-96 md:w-[600px] mx-auto h-48 shadow-xl flex rounded-xl">
+          <figure className="  w-32 md:w-[200px] h-48">
             <img
               className=" w-full h-full rounded-lg  object-cover overflow-hidden"
               src={image}
@@ -23,7 +23,7 @@ const SingleDonationItem = ({ singleData }) => {
               background: `${colors.background}`,
               color: `${colors.text}`,
             }}
-            className="card-body w-80 "
+            className="card-body w-48 md:w-80 "
           >
             <div>
               <span
@@ -33,15 +33,14 @@ const SingleDonationItem = ({ singleData }) => {
                 {category}
               </span>
             </div>
-            <h2 className="card-title text-black">{title}</h2>
+            <h2 className=" md:card-title text-black">{title}</h2>
             <h3 style={{ color: `${colors.text}` }} className=" font-semibold ">
-              {" "}
               ${price}
             </h3>
             <button
               onClick={() => navigate(`/donationDetails/${singleData.id}`)}
               style={{ background: `${colors.text}` }}
-              className="btn py-4 px-4 text-white  w-32 h-5 text-md font-normal"
+              className="btn py-2 md:py-4 px-2 md:px-4 text-white  w-32 h-5 text-md font-normal"
             >
               View Details{" "}
             </button>
