@@ -1,12 +1,8 @@
-import bannerImg from "../../assets/Resources/banner.jpg";
+import bannerImg from "../../assets/Resources/banner.png";
 import Header from "../Header/Header";
-
-const Banner = ({ handleInput, handleSearchBtn }) => {
-  const handleSearchBar = (e) => {
-    e.preventDefault();
-    // Instead of capturing the input value here, pass it to the parent component
-    handleInput(e);
-  };
+import PropTypes from "prop-types";
+const Banner = ({ handleSearchBtn }) => {
+  
 
   return (
     <div>
@@ -29,7 +25,7 @@ const Banner = ({ handleInput, handleSearchBtn }) => {
             </h1>
 
             <div className="flex items-center justify-center">
-              <form onSubmit={handleSearchBar}>
+              <form>
                 <div className="form-control ">
                   <div className="input-group">
                     <input
@@ -53,5 +49,9 @@ const Banner = ({ handleInput, handleSearchBtn }) => {
     </div>
   );
 };
+
+Banner.propTypes = {
+  handleSearchBtn: PropTypes.func.isRequired,
+}
 
 export default Banner;
